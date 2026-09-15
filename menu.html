@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - The Zenith</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- THANH ĐIỀU HƯỚNG -->
+    <div class="header">
+        <a href="index.html" class="logo">
+            <img src="poster/image.png" alt="Logo Thương Hiệu">
+        </a>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav">
+            <!-- Nút Home -->
+            <li class="nav-item">
+                <div class="button">Home</div>
+                <div class="panel">
+                    <div class="panel-layout-70-30">
+                        <div class="panel-left">
+                            <ul class="panel-links">
+                                <li><a href="index.html#about-section">Giới thiệu chung</a></li>
+                                <li><a href="index.html#career-section">Cơ hội nghề nghiệp</a></li>
+                                <li><a href="index.html#posterSlider">Chương trình ưu đãi</a></li>
+                                <li><a href="index.html#membership-section">Thẻ quà tặng</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-divider"></div>
+                        <div class="panel-right">
+                            <p class="quote">"Sự hoàn hảo trong từng giọt cà phê không chỉ là nghệ thuật, mà là cam kết chất lượng tuyệt đối từ chúng tôi đến tay bạn."</p>
+                            <p class="quote-author">- Chuyên gia nhãn hàng -</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nút Menu (Đang Active) -->
+            <li class="nav-item active">
+                <div class="button">Menu</div>
+                <div class="panel">
+                    <div class="panel-content">
+                        <h3 class="panel-title">Danh mục đồ uống</h3>
+                        <ul class="panel-links grid-links">
+                            <li><a href="menu.html">Cà phê pha máy</a></li>
+                            <li><a href="menu.html">Cà phê pha phin truyền thống</a></li>
+                            <li><a href="menu.html">Trà trái cây nhiệt đới</a></li>
+                            <li><a href="menu.html">Trà sữa trân châu</a></li>
+                            <li><a href="menu.html">Đá xay (Freeze)</a></li>
+                            <li><a href="menu.html">Nước ép tươi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nút About Us -->
+            <li class="nav-item">
+                <div class="button">About Us</div>
+                <div class="panel">
+                    <div class="panel-content">
+                        <h3 class="panel-title">Về thương hiệu</h3>
+                        <ul class="panel-links grid-links">
+                            <li><a href="about.html#history-section">Lịch sử thương hiệu</a></li>
+                            <li><a href="about.html#symbol-section">Biểu tượng thương hiệu</a></li>
+                            <li><a href="about.html#policy-section">Chính sách trực tuyến</a></li>
+                            <li><a href="about.html#policy-section">Liên hệ nhượng quyền</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- KHU VỰC 3 NÚT CHỌN ĐỐI TƯỢNG (HOLY TRINITY) -->
+    <section class="holy-trinity-section">
+        <div class="tri-container">
+            <!-- Nút Tri 1: Hình thang chuẩn, hạ thấp -->
+            <div class="tri-item tri-shape-normal active" onclick="showTrinity('tri1', this)">
+                <div class="tri-bg bg-brown"></div>
+                <img src="poster/tri1.png" alt="Tri 1" class="tri-img">
+            </div>
+            
+            <!-- Nút Tri 2: Hình thang NGƯỢC, đẩy lên cao -->
+            <div class="tri-item tri-shape-inverted tri-middle" onclick="showTrinity('tri2', this)">
+                <div class="tri-bg bg-gray"></div>
+                <img src="poster/tri2.png" alt="Tri 2" class="tri-img">
+            </div>
+
+            <!-- Nút Tri 3: Hình thang chuẩn, hạ thấp -->
+            <div class="tri-item tri-shape-normal" onclick="showTrinity('tri3', this)">
+                <div class="tri-bg bg-pink"></div>
+                <img src="poster/tri3.png" alt="Tri 3" class="tri-img">
+            </div>
+        </div>
+
+        <!-- NGẮT 2 DÒNG CHỮ HOLY TRINITY -->
+        <h1 class="trinity-title">HOLY<br>TRINITY</h1>
+    </section>
+
+    <!-- KHU VỰC 2 SẢN PHẨM Ở DƯỚI (STEP-LAYOUT THEO CONCEPT) -->
+    <section class="menu-products-section">
+        
+        <!-- NHÓM TRI 1 -->
+        <div id="tri1" class="product-group active">
+            <div class="product-card left">
+                <!-- Thêm họa tiết Trân châu/Hạt cà phê (pattern-boba) -->
+                <div class="card-bg bg-brown pattern-boba">
+                    <span class="product-name">Trà Sữa Trân Châu</span>
+                </div>
+                <img src="poster/trasuatranchau.png" alt="Trà sữa" class="card-img">
+                <!-- Thêm mô tả nhẹ bên dưới -->
+                <p class="product-desc">Thơm đậm vị trà, dai giòn trân châu</p>
+                <div class="best-seller">★ Best Seller</div>
+            </div>
+            
+            <div class="product-card right">
+                <!-- Thêm họa tiết Bông tuyết (pattern-snow) -->
+                <div class="card-bg bg-dark-pink pattern-snow">
+                    <span class="product-name">Cà Phê Freeze</span>
+                </div>
+                <img src="poster/freeze.png" alt="Freeze" class="card-img">
+                <p class="product-desc">Đá xay buốt lạnh, tỉnh táo tức thì</p>
+                <div class="best-seller">★ Best Seller</div>
+            </div>
+        </div>
+
+        <!-- NHÓM TRI 2 -->
+        <div id="tri2" class="product-group">
+            <div class="product-card left">
+                <!-- Thêm họa tiết Hạt cà phê -->
+                <div class="card-bg bg-dark pattern-bean">
+                    <span class="product-name">Cà Phê Phin</span>
+                </div>
+                <img src="poster/caphephintruyenthong.png" alt="Phin" class="card-img">
+                <p class="product-desc">Đậm đà truyền thống, chắt chiu từng giọt</p>
+                <div class="best-seller">★ Best Seller</div>
+            </div>
+            
+            <div class="product-card right">
+                <!-- Thêm họa tiết Máy pha/Sóng -->
+                <div class="card-bg bg-gray pattern-bean">
+                    <span class="product-name">Cà Phê Pha Máy</span>
+                </div>
+                <img src="poster/caphephamay.png" alt="Pha máy" class="card-img">
+                <p class="product-desc">Lớp crema hoàn hảo, chuẩn vị Espresso</p>
+                <div class="best-seller">★ Best Seller</div>
+            </div>
+        </div>
+
+        <!-- NHÓM TRI 3 -->
+        <div id="tri3" class="product-group">
+            <div class="product-card left">
+                <!-- Thêm họa tiết Lát cam (pattern-orange) -->
+                <div class="card-bg bg-orange pattern-orange">
+                    <span class="product-name">Nước Ép Tươi</span>
+                </div>
+                <img src="poster/nuoceptuoi.png" alt="Nước ép" class="card-img">
+                <p class="product-desc">100% trái cây tươi, thanh lọc cơ thể</p>
+                <div class="best-seller">★ Best Seller</div>
+            </div>
+            
+            <div class="product-card right">
+                <!-- Thêm họa tiết Lá nhiệt đới (pattern-leaf) -->
+                <div class="card-bg bg-green pattern-leaf">
+                    <span class="product-name">Trà Nhiệt Đới</span>
+                </div>
+                <img src="poster/tratraicaynhietdoi.png" alt="Trà trái cây" class="card-img">
+                <p class="product-desc">Bùng nổ vị giác với hoa quả nhiệt đới</p>
+                <div class="best-seller">★ Best Seller</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Cột 1: Thông tin thương hiệu -->
+            <div class="footer-col">
+                <h3>Tệt Quán F&B</h3>
+                <p>Hệ sinh thái F&B đa tầng: Không gian thưởng thức, làm việc và kết nối cộng đồng hoàn hảo.</p>
+                <p class="copyright">© 2026 Tệt Quán. All rights reserved.</p>
+            </div>
+
+            <!-- Cột 2: Địa chỉ & Liên hệ -->
+            <div class="footer-col">
+                <h4>Liên Hệ</h4>
+                <p>📍 <strong>Địa chỉ:</strong> Số 120, Xã Yên Lãng, TP. Hà Nội</p>
+                <p>📞 <strong>Hotline:</strong> 0343421215</p>
+                <p>✉️ <strong>Email:</strong> contact@tetquanetquan.vn</p>
+            </div>
+
+            <!-- Cột 3: Mạng xã hội & Khám phá -->
+            <div class="footer-col">
+                <h4>Kết Nối Với Chúng Tôi</h4>
+                <div class="social-links">
+                    <a href="notfound.html" target="_blank" class="social-icon">Facebook</a>
+                    <a href="notfound.html" target="_blank" class="social-icon">Instagram</a>
+                    <a href="notfound.html" target="_blank" class="social-icon">TikTok</a>
+                    <a href="notfound.html" target="_blank" class="social-icon">YouTube</a>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #aaa;">Giờ mở cửa: 07:00 - 22:30 hàng ngày</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
